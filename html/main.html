@@ -2,33 +2,36 @@
 <html>
     <head>
         <title>.shapes</title>
+
+         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
         <meta content="utf-8" http-equiv="encoding">
 
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
     </head>
 	<body>
         <h1 id="main-header">.shapes</h1>
         <h4>please enter game settings: </h4>
         <form action="shapes.html" method="get">
-            <table id="setting-table">
+            <table id="setting-table" width="60%">
                 <tr>
                     <th>grid size:</th>
-                    <td><label id="x-corr-input">.columns</label> <input type="number" name="x-size" value="1" min="1" max="5"> </td>
-                    <td><label id="y-corr-input">.rows</label> <input type="number" name="y-size" value="1" min="1" max="5"> </td>                
+                    <td width="30%"><label id="x-corr-input">.columns</label> <input type="number" name="x-size" value="1" min="1" max="5"> </td>
+                    <td width="30%"><label id="y-corr-input">.rows</label> <input type="number" name="y-size" value="1" min="1" max="5"> </td>                
 
                 </tr>
                 <tr>
                     <th>difficulty:</th>
-                    <td><button type="button" value="ez" id="game-ez" name="ez">.easy</button> </td>
-                    <td><button type="button" value="med" id="game-med" name="ez">.medium</button></td>
-                    <td><button type="button" value="hard" id="game-hard>" name="ez">.hard</button></td>
+                    <td width="20%"><input type="button" value=".easy" id="game-ez" name="dif"></td>
+                    <td width="20%"><input type="button" value=".medium" id="game-med" name="dif"></td>
+                    <td width="20%"><input type="button" value=".hard" id="game-hard>" name="dif"></td>
                 </tr>
             </table>
             <input type="submit">
         </form>
-    <script src="main.js"></script>
-    <script src="shapes.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/shapes.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     </body>
 </html> 
