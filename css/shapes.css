@@ -1,0 +1,31 @@
+/* Some CSS must be finished */
+
+html {
+  background-color: white; 
+  font-family: Verdana;
+}
+
+#main-header, #sub-header {
+  text-align: center;
+}
+
+#game-starter {
+  margin: 0 auto;
+  display: table;
+
+ /* Make the game starter button nicer to look at */
+ /* Using your own judegement about "nice" */
+}
+
+/* Make the game-starter button change colors when the mouse 
+   is hovering over it */
+
+#game-field {
+  width: 80%;
+  height: 500px;
+  margin: 30px auto;
+  background-color: gray; /* a grand garden green */
+  border-radius: 10px;
+  border: 5px; /* a darker green, like hedges */
+}
+
