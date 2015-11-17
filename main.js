@@ -2,6 +2,7 @@ var GLOBALS = {};
 
 window.onload = function(){
 	readQuery();
+	//console.log(GLOBALS['x-size'])
 	console.log(createGrid(GLOBALS['x-size'], GLOBALS['y-size']));
 }
 
@@ -23,19 +24,23 @@ function createGrid(x,y){
 	console.log(y);
 	console.log("entered create grid funtions")
 	var gameField = $('#game-field');
-
-	for(var row = 0; row < x; row++){
-		createSingleElement().append('gameField');
+	for(var i = 0; i < x; i++)
+	{
+		console.log("hello ")
+		jQuery('<div/>', {
+    	id: 'foo',
+    	href: 'http://google.com',
+    	title: 'Become a Googler',
+    	rel: 'external',
+    	text: 'Go to Google!'
+		}).appendTo('#game-field');
 	}
-
 	return;
 }
 
 function createSingleElement(){
-	var defaultElement = $( "<div id='def-element'> Hello </div>" );
-	return defaultElement;
-}
 
+}
 
 //create login html / css
 //create gameboard html / css

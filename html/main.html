@@ -17,15 +17,18 @@
             <table id="setting-table" width="60%">
                 <tr>
                     <th>grid size:</th>
-                    <td width="30%"><label id="x-corr-input">.columns</label> <input type="number" name="x-size" value="1" min="1" max="5"> </td>
-                    <td width="30%"><label id="y-corr-input">.rows</label> <input type="number" name="y-size" value="1" min="1" max="5"> </td>                
+                    <td width="30%"><label id="x-corr-input">.columns</label> <input type="number" name="x-size" value="3" min="2" max="6"> </td>
+                    <td width="30%"><label id="y-corr-input">.rows</label> <input type="number" name="y-size" value="3" min="2" max="6"> </td>                
 
                 </tr>
                 <tr>
                     <th>difficulty:</th>
-                    <td width="20%"><input type="button" value=".easy" id="game-ez" name="dif"></td>
-                    <td width="20%"><input type="button" value=".medium" id="game-med" name="dif"></td>
-                    <td width="20%"><input type="button" value=".hard" id="game-hard>" name="dif"></td>
+                    <td><input type="radio" id="radio1" name="radios" value="all" checked>
+                        <label for="radio1">easy</label></td>
+                    <td><input type="radio" id="radio2" name="radios"value="false">
+                        <label for="radio2">medium</label></td>
+                    <td><input type="radio" id="radio3" name="radios" value="true">
+                        <label for="radio3">hard</label></td>
                 </tr>
             </table>
             <input type="submit">
