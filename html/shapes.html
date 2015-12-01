@@ -9,19 +9,25 @@
         <meta content="utf-8" http-equiv="encoding">
 
         <link rel="stylesheet" type="text/css" href="../css/shapes.css">
-        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     </head>
 	<body>
-        <h1 id="main-header">.shapes</h1>
 
+    <div class="Container">
+    <div class="Left" id="left-container"><strong>Welcome<br></strong></div>
         <table id="game-field">
 
         </table>
 
+        <div class="Right"><h3>Round History<br></h3></div>
 
-        <button type="button" id="game-start" style="float:right;">Start Game </button>
+    </div>
+    <button type="button" id="game-start">Start Game </button> 
+    <button type="button" id="game-end">End Game </button>
+    <div id="score-history"><strong>Score History</strong></div>
+        
         <script src="../js/main.js"></script>
         <script src="../js/shapes.js"></script>
+        <script src="../js/element.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     </body>
 </html> 

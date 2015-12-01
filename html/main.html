@@ -11,30 +11,33 @@
         <link rel="stylesheet" type="text/css" href="../css/main.css">
     </head>
 	<body>
-        <h1 id="main-header">.shapes</h1>
-        <h4>please enter game settings: </h4>
-        <form action="shapes.html" method="get">
-            <table id="setting-table" width="60%">
-                <tr>
-                    <th>grid size:</th>
-                    <td width="30%"><label id="x-corr-input">.columns</label> <input type="number" name="x-size" value="3" min="2" max="6"> </td>
-                    <td width="30%"><label id="y-corr-input">.rows</label> <input type="number" name="y-size" value="3" min="2" max="6"> </td>                
+        
+        <nav>
+            <h1 id="main-header-main"><strong>.shapes</strong></h1>
+            <form action="shapes.html" method="get">
+                <table id="setting-table" width="60%">
+                    <tr>
+                        <th>grid size:</th>
+                        <td width="30%"><label id="x-corr-input">columns</label> <input type="number" name="x-size" value="3" min="2" max="6"> </td>
+                        <td width="30%"><label id="y-corr-input">rows</label> <input type="number" name="y-size" value="3" min="2" max="6"> </td>                
 
-                </tr>
-                <tr>
-                    <th>difficulty:</th>
-                    <td><input type="radio" id="radio1" name="radios" value="all" checked>
-                        <label for="radio1">easy</label></td>
-                    <td><input type="radio" id="radio2" name="radios"value="false">
-                        <label for="radio2">medium</label></td>
-                    <td><input type="radio" id="radio3" name="radios" value="true">
-                        <label for="radio3">hard</label></td>
-                </tr>
-            </table>
-            <input type="submit">
-        </form>
+                    </tr>
+                    <tr>
+                        <th>difficulty:</th>
+                        <td><input type="radio" id="radio1" name="radios" value="all" checked>
+                            <label for="radio1">easy</label></td>
+                        <td><input type="radio" id="radio2" name="radios"value="false">
+                            <label for="radio2">medium</label></td>
+                        <td><input type="radio" id="radio3" name="radios" value="true">
+                            <label for="radio3">hard</label></td>
+                    </tr>
+                </table>
+                <input type="submit">
+            </form>
+        </nav>
     <script src="../js/main.js"></script>
     <script src="../js/shapes.js"></script>
+    <script src="../js/element.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     </body>
 </html> 

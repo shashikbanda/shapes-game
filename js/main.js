@@ -2,7 +2,8 @@ var GLOBALS = {};
 
 window.onload = function(){
 	readQuery();
-	console.log(createGrid(GLOBALS['x-size'], GLOBALS['y-size']));
+
+	//console.log(createGrid(GLOBALS['x-size'], GLOBALS['y-size']));
 }
 
 function readQuery(){
@@ -35,13 +36,4 @@ function createSingleElement(){
 	var defaultElement = $( "<div id='def-element'> Hello </div>" );
 	return defaultElement;
 }
-
-
-//create login html / css
-//create gameboard html / css
-
-//add clickable objects to gameboard / js
-//add dynamic scoreboard 
-
-
 

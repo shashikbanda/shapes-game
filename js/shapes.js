@@ -1,16 +1,60 @@
 var GLOBALS = {};
 var gameStartButton;
-var gameCurrentlyActive;
+var gameActive = false;
 window.onload = function(){
+    animateText();
 	readQuery();
 	var element = createSingleElement()
 	createGrid(GLOBALS['x-size'], GLOBALS['y-size'], element);
 
 	gameStartButton = document.getElementById('game-start');
+    gameEndButton = document.getElementById('game-end');
+    scoreHistory = document.getElementById('score-history');
+    buttonArea = document.getElementById('left-container');
 
+
+    buttonArea.appendChild(gameStartButton)
+    buttonArea.appendChild(gameEndButton)
+    buttonArea.appendChild(scoreHistory)
+    gameEndButton.style.visibility = "hidden"
 	gameStartButton.addEventListener('click', function(){
-        startGame();
+        if(gameActive === false){
+            $('#main-header-user').hide();
+            $('#main-header-comp').show();
+            gameActive = true;
+            startGame();
+        }
+        
+    });
+    gameEndButton.addEventListener('click', function(){
+        if(gameActive === true){
+            //$('.Left').append('<br></br>')
+            $('#main-header-user').hide();
+            $('#main-header-comp').hide();
+            $('.Left').append("Score: " + GLOBAL_GAME.roundScore);
+            $('.Left').append('<br></br>')
+
+            gameActive=false;
+
+            console.log(GLOBAL_GAME.roundScore)
+            gameStartButton.style.visibility = "visible";
+            gameEndButton.style.visibility = "hidden";
+        }
+        
     })
+}
+// function goToFinalPage(finalScore){
+   
+//     window.location.href = "../html/endgame.html";
+//      $('#main-header-end').append(finalScore);
+// }
+
+function animateText(){
+        $(document).ready(function(){
+       "use strict";    
+        $("nav").hide().slideDown({ queue: false, duration: 2000 });
+        $("nav").hide().fadeIn({duration:2000, queue:false});
+    });
 }
 
 function readQuery(){
@@ -44,30 +88,18 @@ function createSingleElement(){
     var elem = document.createElement("img");
 
     elementdiv.setAttribute('class','initial-state');
+    elementdiv.setAttribute('data-index','false');
     elementtd.appendChild(elementdiv);
     return elementtd;
 }
 
 function startGame() {
-    // Make sure a game isn't already in progress before starting a game
-    // set the game to be in progress if its not.
-    // if(gameCurrentlyActive){
-    //     return;
-    // }
-    // else {
-    //     gameCurrentlyActive = true;
-    // }
-
-    // Hide the 
     gameStartButton.style.visibility = "hidden";
-    initiateRound(GLOBALS['x-size'], GLOBALS['y-size'],0);
+    gameEndButton.style.visibility = "visible"
+    initiateRound(0);
 }
+var GLOBAL_GAME;
+function initiateRound(roundNumber) {
 
-function initiateRound(x,y,roundNumber) {
-
-	var selectedHoles = document.getElementsByClassName('inital-state');
-	console.log(selectedHoles.length)
-	// for(var i = 0; i < selectedHoles.length;i++){
-	// 	console.log(selectedHoles[i])
-	// }
+    GLOBAL_GAME = new Element(GLOBALS['x-size'], GLOBALS['y-size'], GLOBALS['radios']) 
 }
